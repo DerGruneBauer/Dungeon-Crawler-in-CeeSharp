@@ -1,0 +1,16 @@
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\obj\Debug\net5.0\Dungeon Crawler.csprojAssemblyReference.cache
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\obj\Debug\net5.0\Dungeon Crawler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\obj\Debug\net5.0\Dungeon Crawler.AssemblyInfoInputs.cache
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\obj\Debug\net5.0\Dungeon Crawler.AssemblyInfo.cs
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\obj\Debug\net5.0\Dungeon Crawler.csproj.CoreCompileInputs.cache
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\bin\Debug\net5.0\Dungeon Crawler.exe
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\bin\Debug\net5.0\Dungeon Crawler.deps.json
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\bin\Debug\net5.0\Dungeon Crawler.runtimeconfig.json
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\bin\Debug\net5.0\Dungeon Crawler.runtimeconfig.dev.json
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\bin\Debug\net5.0\Dungeon Crawler.dll
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\bin\Debug\net5.0\ref\Dungeon Crawler.dll
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\bin\Debug\net5.0\Dungeon Crawler.pdb
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\obj\Debug\net5.0\Dungeon Crawler.dll
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\obj\Debug\net5.0\ref\Dungeon Crawler.dll
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\obj\Debug\net5.0\Dungeon Crawler.pdb
+C:\Program Files\dotnet\C# Coding\Dungeon Crawler\obj\Debug\net5.0\Dungeon Crawler.genruntimeconfig.cache
