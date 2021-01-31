@@ -38,11 +38,12 @@ namespace Dungeon_Crawler
             //pushes 100 enemys into the enemy stack
             //Stack to hold random enemy deck
             Stack<string> enemyDeck = new Stack<string>();
+
+            Random rndMonster = new Random();
             for (int i = 0; i < 100; i++)
             {
-                Random rnd = new Random();
-                int rndNum = rnd.Next(8);
-                enemyDeck.Push(enemyList[rndNum].Name);
+                int rndNum = rndMonster.Next(8);
+                enemyDeck.Push(enemyList[rndNum].name);
             }
 
             List<Character> characterList = new List<Character>();
@@ -84,7 +85,7 @@ namespace Dungeon_Crawler
             locations.Enqueue("Stairwell"); //Stairwell
             locations.Enqueue("Throne Room"); //Throne Room
 
-            Console.WriteLine($"You have selected the characters of {characterList[0].Name}, {characterList[1].Name}, {characterList[2].Name}, {characterList[3].Name}, {characterList[4].Name} and {characterList[5].Name}. Let the game begin!");
+            Console.WriteLine($"You have selected the characters of {characterList[0].name}, {characterList[1].name}, {characterList[2].name}, {characterList[3].name}, {characterList[4].name} and {characterList[5].name}. Let the game begin!");
 
             //Step 1 - Characters enter the location
             foreach (var location in locations)
@@ -119,6 +120,7 @@ namespace Dungeon_Crawler
                 Console.WriteLine("\n~~~~~~~~~~~");
 
                 //Step 2 - An enemy is drawn from the deck 
+                Random rnd = new Random();
                 for (int i = 0; i < numberOfEnemy; i++)
                 {
                     Enemy chosenE = null;
@@ -132,7 +134,6 @@ namespace Dungeon_Crawler
                     }
 
                     //Step 3 - A random character is chosen to fight the enemy
-                    Random rnd = new Random();
                     int chosenIndex = rnd.Next(0, characterList.Count);
                     Character chosenChar = characterList[chosenIndex];
                     Console.Write($"{chosenChar.name} steps in to defend the group.\n ");
@@ -174,7 +175,6 @@ namespace Dungeon_Crawler
                     //Step 5 - Else that character defeats the enemy
                     enemyDeck.Pop();
                 }
-
             }
             Console.WriteLine("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.WriteLine("~~~~~~~~~~~~~~~~~Winner~~~~~~~~~~~~~~~~");
@@ -183,6 +183,9 @@ namespace Dungeon_Crawler
             {
                 Console.WriteLine($"{characterList[i].name} with {characterList[i].totalHitPoint} hitpoints left.");
             }
+
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }
 
         static int getNumberOfEnemies(int num1, int num2)
@@ -205,45 +208,26 @@ namespace Dungeon_Crawler
             int hitpointAmount = rnd.Next(num1, num2);
             return hitpointAmount;
         }
-
         public class Enemy
         {
-            public string name;
-            public int minDamage;
-            public int maxDamage;
+            public string name { get; set; }
+            public int minDamage { get; set; }
+            public int maxDamage { get; set; }
             public Enemy(string name, int minDamage, int maxDamage)
             {
                 this.name = name;
                 this.minDamage = minDamage;
                 this.maxDamage = maxDamage;
             }
-            public string Name
-            {
-                get { return name; }
-                set { name = value; }
-            }
-            public int MinDamage
-            {
-                get { return minDamage; }
-                set { minDamage = value; }
-            }
-            public int MaxDamage
-            {
-                get { return maxDamage; }
-                set { maxDamage = value; }
-            }
-
         }
-
-
         public class Character
         {
-            public string name;
-            public string locCantFight;
-            public string enemyCantFight;
-            public int minHitPoint;
-            public int maxHitPoint;
-            public int totalHitPoint;
+            public string name { get; set; }
+            public string locCantFight { get; set; }
+            public string enemyCantFight { get; set; }
+            public int minHitPoint { get; set; }
+            public int maxHitPoint { get; set; }
+            public int totalHitPoint { get; set; }
             public Character(string name, string locCantFight, string enemyCantFight, int minHitPoint, int maxHitPoint, int totalHitPoint)
             {
                 this.name = name;
@@ -253,69 +237,18 @@ namespace Dungeon_Crawler
                 this.maxHitPoint = maxHitPoint;
                 this.totalHitPoint = totalHitPoint;
             }
-            public string Name
-            {
-                get { return name; }
-                set { name = value; }
-            }
-            public string LocCantFight
-            {
-                get { return locCantFight; }
-                set { locCantFight = value; }
-            }
-            public string EnemyCantFight
-            {
-                get { return enemyCantFight; }
-                set { enemyCantFight = value; }
-            }
-            public int MinHitPoint
-            {
-                get { return minHitPoint; }
-                set { minHitPoint = value; }
-            }
-            public int MaxHitPoint
-            {
-                get { return maxHitPoint; }
-                set { maxHitPoint = value; }
-            }
-            public int TotalHitPoint
-            {
-                get { return totalHitPoint; }
-                set { totalHitPoint = value; }
-            }
         }
-
         public class Location
         {
-            public string locationName;
-            public int enemyNumberMin;
-            public int enemyNumberMax;
+            public string locationName { get; set; }
+            public int enemyNumberMin { get; set; }
+            public int enemyNumberMax { get; set; }
             public Location(string locationName, int enemyNumberMin, int enemyNumberMax)
             {
                 this.locationName = locationName;
                 this.enemyNumberMin = enemyNumberMin;
                 this.enemyNumberMax = enemyNumberMax;
             }
-            public string LocationName
-            {
-                get { return locationName; }
-                set { locationName = value; }
-            }
-            public int EnemyNumberMin
-            {
-                get { return enemyNumberMin; }
-                set { enemyNumberMin = value; }
-            }
-            public int EnemyNumberMax
-            {
-                get { return enemyNumberMax; }
-                set { enemyNumberMax = value; }
-            }
         }
-
-
     }
-
-
-
 }
